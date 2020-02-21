@@ -11,10 +11,11 @@ def line(katz_deli)
    puts "The line is currently: #{line_spot.join(" ")}"
  end
 end
+$ticket_number = 0
 
-def take_a_number(katz_deli, customer)
- katz_deli.push(customer)
- puts "Welcome, #{customer}. You are number #{katz_deli.size} in line."
+def take_a_number
+ $ticket_number += 1
+ puts "Welcome. You are number #{$ticket_number} in line."
 end
 
 def now_serving(katz_deli)
@@ -25,3 +26,9 @@ def now_serving(katz_deli)
    katz_deli.shift
  end
 end
+
+
+take_a_number
+take_a_number
+take_a_number
+take_a_number
